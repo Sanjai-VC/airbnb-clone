@@ -1,16 +1,18 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import "./styles/PropertyCard.css";
 
-function PropertyCard({ property }) {
+const PropertyCard = ({ image, title, location, price, rating }) => {
   return (
     <div className="property-card">
-      <img src={property.image} alt={property.name} />
-      <h2>{property.name}</h2>
-      <p>{property.description}</p>
-      <Link to={`/properties/${property.id}`}>View Details</Link>
+      <img src={image} alt={title} />
+      <div className="property-info">
+        <h3>{title}</h3>
+        <p>{location}</p>
+        <p>Price: {price}</p>
+        <p>Rating: ⭐{rating}</p>
+      </div>
     </div>
   );
-}
+};
 
 export default PropertyCard;
-

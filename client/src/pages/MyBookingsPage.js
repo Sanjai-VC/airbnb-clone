@@ -1,23 +1,37 @@
 import React from "react";
+import "./styles/MyBookingsPage.css";
 
-function MyBookingsPage() {
+const MyBookingsPage = () => {
   const bookings = [
-    { id: 1, property: "Beach House", checkIn: "2024-12-25", checkOut: "2024-12-30" },
-    { id: 2, property: "Mountain Cabin", checkIn: "2025-01-05", checkOut: "2025-01-10" },
+    {
+      property: "Luxury Apartment",
+      location: "Mumbai, India",
+      dates: "25th Dec - 28th Dec 2024",
+      price: "₹45,000",
+    },
+    {
+      property: "Beach Villa",
+      location: "Goa, India",
+      dates: "1st Jan - 5th Jan 2025",
+      price: "₹80,000",
+    },
   ];
 
   return (
-    <div>
-      <h1>My Bookings</h1>
-      <ul>
-        {bookings.map((booking) => (
-          <li key={booking.id}>
-            {booking.property} (Check-In: {booking.checkIn}, Check-Out: {booking.checkOut})
-          </li>
+    <div className="my-bookings-page">
+      <h2>My Bookings</h2>
+      <div className="bookings-list">
+        {bookings.map((booking, index) => (
+          <div className="booking-card" key={index}>
+            <h3>{booking.property}</h3>
+            <p>Location: {booking.location}</p>
+            <p>Dates: {booking.dates}</p>
+            <p>Total Price: {booking.price}</p>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
-}
+};
 
 export default MyBookingsPage;

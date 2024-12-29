@@ -1,21 +1,22 @@
 import React from "react";
+import "./styles/RegisterPage.css";
 
-function RegisterPage() {
-  const handleRegister = (e) => {
-    e.preventDefault();
-    // Add register logic here
-  };
-
+const RegisterPage = () => {
   return (
-    <form onSubmit={handleRegister}>
-      <h1>Register</h1>
-      <label>Full Name: <input type="text" name="fullName" required /></label>
-      <label>Email: <input type="email" name="email" required /></label>
-      <label>Password: <input type="password" name="password" required /></label>
-      <button type="submit">Register</button>
-    </form>
+    <div className="register-page">
+      <h2>Create an Account</h2>
+      <form>
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email Address" required />
+        <input type="password" placeholder="Password" required />
+        <input type="password" placeholder="Confirm Password" required />
+        <button className="search-button" type="submit">Sign Up</button>
+      </form>
+      <p>
+        Already have an account? <a href="/login">Log In</a>
+      </p>
+    </div>
   );
-}
+};
 
 export default RegisterPage;
-

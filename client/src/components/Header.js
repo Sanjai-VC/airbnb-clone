@@ -1,18 +1,30 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import "./styles/Header.css";
 
-function Header() {
+const Header = () => {
   return (
-    <header>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/login">Login</Link>
-        <Link to="/register">Register</Link>
-        <Link to="/my-bookings">My Bookings</Link>
-      </nav>
+    <header className="header">
+      <div className="header-logo">
+        <a href="/">
+          <img
+            src="https://www.1min30.com/wp-content/uploads/2018/02/Couleur-logo-Airbnb.jpg"
+            alt="Airbnb Logo"
+          />
+        </a>
+      </div>
+      <div className="header-search">
+        <input
+          type="text"
+          placeholder="Search destinations, properties..."
+        />
+        <button className="search-button">Search</button>
+      </div>
+      <div className="header-menu">
+        <a href="/register">Sign Up</a>
+        <a href="/login">Log In</a>
+      </div>
     </header>
   );
-}
+};
 
 export default Header;
- 

@@ -1,0 +1,39 @@
+.property-details-page {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+  }
+  
+  .property-details-page h2 {
+    margin-bottom: 20px;
+    color: #ff385c;
+  }
+  
+  .property-images {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .property-images img {
+    width: 30%;
+    border-radius: 10px;
+  }
+  
+  .property-details-page p {
+    margin: 10px 0;
+  }
+  
+  .property-details-page button {
+    padding: 10px 20px;
+    background-color: #ff385c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
