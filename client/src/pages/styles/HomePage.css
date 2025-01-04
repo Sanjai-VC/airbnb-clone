@@ -96,3 +96,15 @@ button:focus {
     outline: none;
     box-shadow: 0 0 5px 2px #ff385c;
 }
+
+.search-section {
+    margin: 20px 0;
+  }
+  
+  .search-section input,
+  .search-section button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+  }
+  

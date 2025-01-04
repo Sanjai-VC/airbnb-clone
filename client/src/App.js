@@ -7,6 +7,7 @@ import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import PropertyDetailsPage from "./pages/PropertyDetailsPage";
 import MyBookingsPage from "./pages/MyBookingsPage";
+import SearchResultsPage from "./pages/SearchResultsPage"; // Added SearchResultsPage import
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/property/:id" element={<PropertyDetailsPage />} />
         <Route path="/my-bookings" element={<MyBookingsPage />} />
+        <Route path="/search-results" element={<SearchResultsPage />} /> {/* Added Route for SearchResultsPage */}
       </Routes>
       <Footer />
     </Router>

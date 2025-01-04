@@ -1,88 +1,95 @@
+/* Login Page Styles */
 .login-page {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background-color: #f7f7f7;
-    font-family: Arial, sans-serif;
-}
-
-.login-container {
+    font-family: "Arial", sans-serif;
+  }
+  
+  .login-container {
     width: 100%;
     max-width: 400px;
     background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.login-title {
-    font-size: 24px;
-    font-weight: bold;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     text-align: center;
-    margin-bottom: 20px;
+  }
+  
+  .login-title {
+    font-size: 28px;
+    font-weight: bold;
     color: #333;
-}
-
-.login-form {
+    margin-bottom: 10px;
+  }
+  
+  .login-subtitle {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .login-form {
     display: flex;
     flex-direction: column;
-}
-
-.login-form input {
+    align-items: center;
+  }
+  
+  .login-input {
     font-size: 16px;
-    padding: 10px;
-    margin: 10px 0;
+    padding: 12px;
+    margin-bottom: 15px;
+    width: 100%;
     border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.login-form button {
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .login-input:focus {
+    border-color: #ff385c;
+    box-shadow: 0 0 5px rgba(255, 56, 92, 0.3);
+    outline: none;
+  }
+  
+  .login-error {
+    color: #e0314d;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .login-button {
+    width: 100%;
+    padding: 12px;
     font-size: 16px;
-    padding: 10px;
-    margin-top: 10px;
+    font-weight: bold;
+    color: white;
     border: none;
-    border-radius: 5px;
-    background-color: #ff385c;
-    color: #fff;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #ff385c, #ff575f);
     cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
-}
-
-.login-form button:hover {
-    background-color: #e0314d;
-}
-
-.login-footer {
-    text-align: center;
-    margin-top: 10px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .login-button:hover {
+    background: linear-gradient(90deg, #ff575f, #ff385c);
+    transform: scale(1.02);
+  }
+  
+  .login-footer {
+    margin-top: 15px;
     font-size: 14px;
     color: #666;
-}
-/* Add button styles for the Login Page */
-button {
-    font-size: 16px;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 20px;
-    background: linear-gradient(90deg, #ff385c, #ff575f);
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease-in-out;
-    position: relative;
-    overflow: hidden;
-}
-
-button:hover {
-    background-color: #e0314d;
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
-
-button:active {
-    transform: scale(0.98);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
+  }
+  
+  .login-footer a {
+    color: #ff385c;
+    text-decoration: none;
+  }
+  
+  .login-footer a:hover {
+    text-decoration: underline;
+  }
+  

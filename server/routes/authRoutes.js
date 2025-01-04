@@ -50,3 +50,31 @@ router.post('/login', async (req, res) => {
 });
 
 module.exports = router;
+
+
+const Joi = require('joi');
+
+// Validation schema
+const registerSchema = Joi.object({
+    name: Joi.string().required(),
+    email: Joi.string().email().required(),
+    password: Joi.string().min(6).required(),
+});
+
+// Route
+router.post('/register', async (req, res) => {
+    try {
+        const { error } = registerSchema.validate(req.body);
+        if (error) return res.status(400).json({ error: error.details[0].message });
+
+        // Proceed with registration logic
+    } catch (err) {
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});
+
+const authenticate = require('../middleware/authMiddleware');
+
+router.get('/protected', authenticate, (req, res) => {
+    res.json({ message: 'Welcome to the protected route' });
+});
